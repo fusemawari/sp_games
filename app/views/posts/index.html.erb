@@ -1,0 +1,18 @@
+<h1>SPGAMES</h1>
+<p><a href="/posts/new">画像投稿リンク</a></p>
+<% @posts.each do |post| %>
+<div class="content_post">
+  <div class="more">
+    <ul class="more_list">
+      <li><%= link_to "詳細", post_path(post.id) %></li>
+      <li><span>投稿者<%= post.name %></span></li>
+      <li><span>投稿タイトル<%= post.title %></span></li>
+      <li><span>投稿内容<%= post.text %></span></li>
+      <li><span>イメージ<img src="<%= post.image %>"></span></li>
+    </ul>
+  </div>
+  <span class="name">
+  </span>
+</div>
+
+<% end %>
